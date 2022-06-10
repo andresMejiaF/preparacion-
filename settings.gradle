@@ -1,0 +1,4 @@
+rootProject.name = 'preparacionSpring'
+include 'persistencia'
+include 'preparacion'
+
