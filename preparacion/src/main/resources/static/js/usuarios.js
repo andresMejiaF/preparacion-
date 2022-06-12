@@ -22,9 +22,9 @@ async function cargarUsuarios(){
     for (let usuario of usuarios){
 
         let botonEliminmar = '<a href=\"#\" onclick="eliminarUsuarioid('+usuario.id+')" class=\"btn btn-danger btclassNamecle btn-sm\"><i class=\"fas fa-trash\"></iclassName </a>';
-
+        let telefonoTexto = usuario.telefono == null ? '-' : usuario.telefono;
         let usuarioHTML = '<tr></tr><td>'+ usuario.id +'</td><td>'+ usuario.nombre +' '+ usuario.apellido +'</td><td>'
-            + usuario.email +'</td><td>'+usuario.telefono
+            + usuario.email +'</td><td>'+telefonoTexto
             +'</td><td>'+ botonEliminmar +'</td></tr>';
         listadoHtml+= usuarioHTML;
     }

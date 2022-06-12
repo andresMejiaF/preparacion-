@@ -1,10 +1,7 @@
 package preparacion.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import preparacion.dao.UsuarioDao;
 import preparacion.models.Usuario;
 
@@ -31,9 +28,14 @@ public class usuarioController {
 
     }
 
-    @RequestMapping(value = "api/usuarios")
+    @RequestMapping(value = "api/usuarios", method = RequestMethod.GET)
     public List<Usuario> getUsuarios(){
         return usuarioDao.getUsuarios();
+
+    }
+    @RequestMapping(value = "api/usuarios", method = RequestMethod.POST)
+    public void getUsuarios(@RequestBody Usuario usuario){
+         usuarioDao.registrar(usuario);
 
     }
     /*
