@@ -29,6 +29,9 @@ async function registrarUsuario(){
         body: JSON.stringify(datos)
     });
 
+    alert("Listo ya quedo fino");
+    window.location.href ="usuarios.html"
+
 }
 
 
