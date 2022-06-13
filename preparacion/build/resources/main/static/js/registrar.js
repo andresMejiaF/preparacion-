@@ -30,7 +30,7 @@ async function registrarUsuario(){
     });
 
     alert("Listo ya quedo fino");
-    window.location.href ="usuarios.html"
+    window.location.href ="login.html"
 
 }
 
